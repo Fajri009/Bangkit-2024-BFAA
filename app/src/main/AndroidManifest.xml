@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Bangkit2024BFAA"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Fragment.LatihanFragment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
