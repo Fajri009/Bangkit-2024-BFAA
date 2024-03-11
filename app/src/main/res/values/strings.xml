@@ -47,6 +47,12 @@
     <string name="menu_hotel">Hotel</string>
     <string name="menu_subway">Subway</string>
 
+    <string name="title_activity_main_bottom_nav">MainBottomNav</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
