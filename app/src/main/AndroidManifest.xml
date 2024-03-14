@@ -15,6 +15,45 @@
         android:theme="@style/Theme.Bangkit2024BFAA"
         tools:targetApi="31">
         <activity
+            android:name=".BackgroundThreadDanNetworking.Retrofit.ui.MainRetrofit"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BackgroundThreadDanNetworking.LoopJ.ListQuotesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BackgroundThreadDanNetworking.LoopJ.MainLoopJ"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BackgroundThreadDanNetworking.BackgroundThread.MainCoroutine"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BackgroundThreadDanNetworking.BackgroundThread.MainBackgroundThread"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Navigation.TabLayout.single.MainSingleTabLayout"
             android:exported="true">
             <intent-filter>
