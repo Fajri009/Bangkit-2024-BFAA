@@ -15,6 +15,45 @@
         android:theme="@style/Theme.Bangkit2024BFAA"
         tools:targetApi="31">
         <activity
+            android:name=".AndroidArchitectureComponent.FragmentKTX.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AndroidArchitectureComponent.FragmentKTX.MainFragmentKTX"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AndroidArchitectureComponent.LiveDataAPI.ui.MainLiveDataAPI"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AndroidArchitectureComponent.LiveData.MainLiveData"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AndroidArchitectureComponent.ViewModel.MainViewModel"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".BackgroundThreadDanNetworking.Retrofit.ui.MainRetrofit"
             android:exported="true">
             <intent-filter>
