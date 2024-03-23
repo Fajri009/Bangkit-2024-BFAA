@@ -15,6 +15,45 @@
         android:theme="@style/Theme.Bangkit2024BFAA"
         tools:targetApi="31">
         <activity
+            android:name=".LocalDataPersistent.SharedPreferences.Setting.MainSettingPreference"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LocalDataPersistent.SharedPreferences.MenyimpanData.FormUserPreferenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LocalDataPersistent.SharedPreferences.MenyimpanData.MainSharedPreferences"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LocalDataPersistent.MenyimpanMembukaFile.MainMenyimpanMembukaFile"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Testing.MainUnitTest"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".AndroidArchitectureComponent.FragmentKTX.ProfileActivity"
             android:exported="false" />
         <activity
