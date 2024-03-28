@@ -15,6 +15,48 @@
         android:theme="@style/Theme.Bangkit2024BFAA"
         tools:targetApi="31">
         <activity
+            android:name=".LocalDataPersistent.Repository.ui.MainRepositoryActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LocalDataPersistent.Room.ui.insert.NoteAddUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LocalDataPersistent.Room.ui.main.MainRoom"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LocalDataPersistent.SQLite.NoteAddUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LocalDataPersistent.SQLite.MainSQLite"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LocalDataPersistent.DataStore.MainDataStore"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".LocalDataPersistent.SharedPreferences.Setting.MainSettingPreference"
             android:exported="true">
             <intent-filter>
