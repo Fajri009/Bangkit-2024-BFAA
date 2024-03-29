@@ -228,9 +228,40 @@
     <string name="added">Satu item berhasil ditambahkan</string>
     <string name="changed">Satu item berhasil diubah</string>
     <string name="deleted">Satu item berhasil dihapus</string>
-    
+
     <string name="home">Home</string>
     <string name="bookmark">Bookmark</string>
     <string name="published_date">Published Date</string>
     <string name="save_bookmark">Save Bookmark?</string>
+
+    <!-- Background Task & Scheduler -->
+    <string name="this_sms_receiver_app">Ini Aplikasi Sms Receiver</string>
+    <string name="download_file">Download a File</string>
+    <string name="coming_from">Coming From</string>
+    <string name="this_play">Oii, main kesini jadi ngga? sekarang yak.</string>
+    <string name="check_sms_permission">Check SMS Permission</string>
+    <string name="incoming_message">Incoming Message</string>
+    <string name="from">from : %s</string>
+
+    <string name="send_notif">Send Notif</string>
+    <string name="notification_title">Dicoding Indonesia</string>
+    <string name="notification_message">Mari belajar bersama</string>
+    <string name="notification_subtext">Reminder</string>
+
+    <string name="open_detail">Open Detail</string>
+    <string name="message">Message</string>
+
+    <string name="one_time_alarm">One Time Alarm</string>
+    <string name="alarm_date">Tanggal Alarm</string>
+    <string name="set_one_time_alarm">Set One Time Alarm</string>
+    <string name="alarm_message">Pesan Alarm</string>
+    <string name="repeating_alarm">Repeating Alarm</string>
+    <string name="set_repeating_alarm">Set Repeating Alarm</string>
+    <string name="cancel_alarm">Batalkan Alarm</string>
+    <string name="alarm_time">Waktu Alarm</string>
+
+    <string name="enter_city_name">Enter city name</string>
+    <string name="run_one_time_task">Run One Time Task</string>
+    <string name="run_periodic_task">Run Periodic Task</string>
+    <string name="cancel_periodic_task">Cancel Periodic Task</string>
 </resources>

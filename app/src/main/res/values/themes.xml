@@ -15,4 +15,8 @@
     <style name="Theme.Bangkit2024BFAA.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Bangkit2024BFAA.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Background Task & Scheduler -->
+    <!-- Idenya adalah menampilkan sebuah Activity seolah-olah menjadi sebuah dialog -->
+    <style name="Theme.Bangkit2024BFAA.Dialog" parent="Theme.Material3.DayNight.Dialog" />
 </resources>

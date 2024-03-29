@@ -21,6 +21,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "API_KEY", "\"ghp_123\"")
+        buildConfigField("String", "API_ID", "\"89ac1dba265f40db7a0a45d74e63accf\"")
     }
 
     buildTypes {
@@ -126,4 +127,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0")
     implementation("androidx.room:room-runtime:2.5.2")
     ksp("androidx.room:room-compiler:2.5.2")
+
+    // WorkManager
+    implementation("androidx.work:work-runtime:2.8.1")
 }

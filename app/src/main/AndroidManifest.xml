@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +22,80 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bangkit2024BFAA"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".BackgroundTaskScheduler.WorkManager.MainWorkManager"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".BackgroundTaskScheduler.AlarmManager.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".BackgroundTaskScheduler.AlarmManager.MainAlarmManager"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BackgroundTaskScheduler.TackBackStack.DetailActivity"
+            android:exported="false"
+            android:parentActivityName=".BackgroundTaskScheduler.TackBackStack.MainTackBackStack" />
+        <activity
+            android:name=".BackgroundTaskScheduler.TackBackStack.MainTackBackStack"
+            android:exported="true"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BackgroundTaskScheduler.Notification.MainNotification"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".BackgroundTaskScheduler.BroadcastReceiverSMS.SmsReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".BackgroundTaskScheduler.BroadcastReceiverSMS.SmsReceiverActivity"
+            android:theme="@style/Theme.Bangkit2024BFAA.Dialog" />
+        <activity
+            android:name=".BackgroundTaskScheduler.BroadcastReceiverSMS.MainBroadcastReceiverSMS"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".LocalDataPersistent.Repository.ui.MainRepositoryActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +107,7 @@
             android:exported="false" />
         <activity
             android:name=".LocalDataPersistent.Room.ui.main.MainRoom"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,7 +119,7 @@
             android:exported="false" />
         <activity
             android:name=".LocalDataPersistent.SQLite.MainSQLite"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,7 +128,7 @@
         </activity>
         <activity
             android:name=".LocalDataPersistent.DataStore.MainDataStore"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -58,7 +137,7 @@
         </activity>
         <activity
             android:name=".LocalDataPersistent.SharedPreferences.Setting.MainSettingPreference"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -70,7 +149,7 @@
             android:exported="false" />
         <activity
             android:name=".LocalDataPersistent.SharedPreferences.MenyimpanData.MainSharedPreferences"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -79,7 +158,7 @@
         </activity>
         <activity
             android:name=".LocalDataPersistent.MenyimpanMembukaFile.MainMenyimpanMembukaFile"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -88,7 +167,7 @@
         </activity>
         <activity
             android:name=".Testing.MainUnitTest"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -100,7 +179,7 @@
             android:exported="false" />
         <activity
             android:name=".AndroidArchitectureComponent.FragmentKTX.MainFragmentKTX"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -109,7 +188,7 @@
         </activity>
         <activity
             android:name=".AndroidArchitectureComponent.LiveDataAPI.ui.MainLiveDataAPI"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -118,7 +197,7 @@
         </activity>
         <activity
             android:name=".AndroidArchitectureComponent.LiveData.MainLiveData"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -127,7 +206,7 @@
         </activity>
         <activity
             android:name=".AndroidArchitectureComponent.ViewModel.MainViewModel"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -136,7 +215,7 @@
         </activity>
         <activity
             android:name=".BackgroundThreadDanNetworking.Retrofit.ui.MainRetrofit"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -148,7 +227,7 @@
             android:exported="false" />
         <activity
             android:name=".BackgroundThreadDanNetworking.LoopJ.MainLoopJ"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -157,7 +236,7 @@
         </activity>
         <activity
             android:name=".BackgroundThreadDanNetworking.BackgroundThread.MainCoroutine"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -166,7 +245,7 @@
         </activity>
         <activity
             android:name=".BackgroundThreadDanNetworking.BackgroundThread.MainBackgroundThread"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -175,7 +254,7 @@
         </activity>
         <activity
             android:name=".Navigation.TabLayout.single.MainSingleTabLayout"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -184,7 +263,7 @@
         </activity>
         <activity
             android:name=".Navigation.TabLayout.MainTabLayout"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -194,7 +273,7 @@
         <activity
             android:name=".Navigation.BottomNav.MainBottomNav"
             android:exported="true"
-            android:label="@string/title_activity_main_bottom_nav">
+            android:label="@string/title_activity_main_bottom_nav" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -220,7 +299,7 @@
             android:exported="false" />
         <activity
             android:name=".Navigation.NavComponent.MainNavigation"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -229,7 +308,7 @@
         </activity>
         <activity
             android:name=".Fragment.LatihanFragment"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
